@@ -54,4 +54,9 @@ public class Animal {
                 ", chakraType='" + chakraType + '\'' +
                 '}';
     }
+
+    public String presentation() {
+        return "Hola, soy un/a" + this.animal + ", Tengo un pacto de invocación con los ninjas. Mi tipo naturaleza de chakra es " +
+                this.chakraType + ". Si me preguntas si soy un biju, eso es " + this.isBiju;
+    }
 }
