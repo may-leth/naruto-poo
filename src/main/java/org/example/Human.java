@@ -37,12 +37,12 @@ public class Human {
         this.name = name;
     }
 
-    public int getEdad() {
+    public int getAge() {
         return age;
     }
 
-    public void setEdad(int edad) {
-        this.age = edad;
+    public void setAge(int age) {
+        this.age = age;
     }
 
     @Override
