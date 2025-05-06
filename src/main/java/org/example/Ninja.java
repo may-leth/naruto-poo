@@ -39,10 +39,10 @@ public class Ninja extends Human {
     @Override
     public String toString() {
         return "Ninja{" +
-                "clan='" + clan + '\'' +
+                "name='" + name + '\'' +
+                ", clan='" + clan + '\'' +
                 ", ninjaLevel='" + ninjaLevel + '\'' +
                 ", summoning='" + summoning + '\'' +
-                ", name='" + name + '\'' +
                 ", aldea='" + aldea + '\'' +
                 ", occupation='" + occupation + '\'' +
                 ", age=" + age +

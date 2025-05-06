@@ -3,13 +3,13 @@ package org.example;
 public class Animal {
     protected String animal;
     protected String lifeStage;
-    protected boolean biju;
+    protected boolean isBiju;
     protected String chakraType;
 
-    public Animal(String animal, String lifeStage, boolean biju, String chakraType) {
+    public Animal(String animal, String lifeStage, boolean isBiju, String chakraType) {
         this.animal = animal;
         this.lifeStage = lifeStage;
-        this.biju = biju;
+        this.isBiju = isBiju;
         this.chakraType = chakraType;
     }
 
@@ -29,12 +29,12 @@ public class Animal {
         this.lifeStage = lifeStage;
     }
 
-    public boolean isBiju() {
-        return biju;
+    public boolean getIsBiju() {
+        return isBiju;
     }
 
-    public void setBiju(boolean biju) {
-        this.biju = biju;
+    public void setIsBiju(boolean isBiju) {
+        this.isBiju = isBiju;
     }
 
     public String getChakraType() {
@@ -48,9 +48,9 @@ public class Animal {
     @Override
     public String toString() {
         return "Animal{" +
-                "animal='" + animal + '\'' +
+                "species='" + animal + '\'' +
                 ", lifeStage='" + lifeStage + '\'' +
-                ", biju=" + biju +
+                ", biju=" + isBiju +
                 ", chakraType='" + chakraType + '\'' +
                 '}';
     }
