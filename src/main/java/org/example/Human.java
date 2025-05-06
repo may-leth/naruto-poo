@@ -4,13 +4,13 @@ public class Human {
     protected String name;
     protected String aldea;
     protected String occupation;
-    protected int edad;
+    protected int age;
 
-    public Human(String aldea, String occupation, String name, int edad) {
+    public Human(String aldea, String occupation, String name, int age) {
         this.aldea = aldea;
         this.occupation = occupation;
         this.name = name;
-        this.edad = edad;
+        this.age = age;
     }
 
     public String getAldea() {
@@ -38,11 +38,11 @@ public class Human {
     }
 
     public int getEdad() {
-        return edad;
+        return age;
     }
 
     public void setEdad(int edad) {
-        this.edad = edad;
+        this.age = edad;
     }
 
     @Override
@@ -51,7 +51,7 @@ public class Human {
                 "name='" + name + '\'' +
                 ", aldea='" + aldea + '\'' +
                 ", occupation='" + occupation + '\'' +
-                ", edad=" + edad +
+                ", edad=" + age +
                 '}';
     }
 }
