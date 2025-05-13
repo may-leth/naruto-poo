@@ -1,6 +1,9 @@
 package org.example;
 
-public class Animal {
+import Interfaces.ChakraUser;
+import Interfaces.Introduce;
+
+public class Animal implements Introduce, ChakraUser {
     protected String animal;
     protected String lifeStage;
     protected boolean isBiju;
@@ -55,8 +58,14 @@ public class Animal {
                 '}';
     }
 
+    @Override
     public String presentation() {
-        return "Hola, soy un/a" + this.animal + ", Tengo un pacto de invocación con los ninjas. Mi tipo naturaleza de chakra es " +
-                this.chakraType + ". Si me preguntas si soy un biju, eso es " + this.isBiju;
+        return "Hola, soy un/a " + this.animal + ". Tengo un pacto de invocación con los ninjas. Mi naturaleza de chakra es " +
+                this.chakraType + ". Si me preguntas si soy un biju, la respuesta es " + (this.isBiju ? "si." : "no.");
+    }
+
+    @Override
+    public String chakraNature() {
+        return "Mi tipo de chakra tiene afinidad con el tipo: " + this.chakraType + ".";
     }
 }

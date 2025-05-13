@@ -16,5 +16,10 @@ public class Main {
         Animal kyubi = new Animal("zorro", "adulto", true, "fuego");
         System.out.println(kyubi.toString());
         System.out.println(kyubi.presentation());
+
+        //presentations
+        System.out.println(naruto.presentation());
+        System.out.println(gamabunta.presentation());
+        System.out.println(teuchi.presentation());
     }
 }

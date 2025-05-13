@@ -1,6 +1,9 @@
 package org.example;
 
-public class Ninja extends Human {
+import Interfaces.ChakraUser;
+import Interfaces.Introduce;
+
+public class Ninja extends Human implements Introduce, ChakraUser {
     protected String clan;
     protected String ninjaLevel;
     protected String summoning;
@@ -47,5 +50,17 @@ public class Ninja extends Human {
                 ", occupation='" + occupation + '\'' +
                 ", age=" + age +
                 '}';
+    }
+
+    @Override
+    public String presentation(){
+        return "Hola, soy " + super.name + " del clan " + this.clan + ", un ninja de nivel " + this.ninjaLevel +
+                " de la aldea " + this.aldea + ". Mi técnica de invocación está relacionada con " + this.summoning +
+                ". ¡Estoy siempre listo para proteger a mi gente con todo mi poder!";
+    }
+
+    @Override
+    public String chakraNature() {
+        return "Mi tipo de chakra en afín al estilo elemental: " + super.;
     }
 }

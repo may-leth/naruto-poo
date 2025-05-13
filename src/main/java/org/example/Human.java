@@ -1,6 +1,8 @@
 package org.example;
 
-public class Human {
+import Interfaces.Introduce;
+
+public class Human implements Introduce {
     protected String name;
     protected String aldea;
     protected String occupation;
@@ -53,5 +55,10 @@ public class Human {
                 ", occupation='" + occupation + '\'' +
                 ", edad=" + age +
                 '}';
+    }
+
+    @Override
+    public String presentation() {
+        return "Hola, mi nombre es " + this.name + ", tengo " + this.age + " años, soy " + this.occupation + " en " + this.aldea + ".";
     }
 }
