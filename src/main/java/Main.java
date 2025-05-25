@@ -1,6 +1,8 @@
-package org.example;
-
 import Interfaces.Introduce;
+import org.example.Animal;
+import org.example.Battle;
+import org.example.Human;
+import org.example.Ninja;
 
 import java.util.Arrays;
 import java.util.List;
