@@ -1,17 +1,56 @@
 package org.example;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import Interfaces.Introduce;
+
+import java.util.Arrays;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        System.out.println("🌀 BIENVENIDO AL MUNDO NINJA 🌀\n");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        Human teuchi = new Human("Konoha", "chef", "Teuchi", 47);
+        Ninja naruto = new Ninja("Konoha", "ninja", "Naruto", 17, "Uzumaki", "chunin", "sapos", "aire");
+        Animal gamabunta = new Animal("sapo", "adulto-nodefinido", false, "agua");
+        Animal kyubi = new Animal("zorro", "adulto", true, "fuego");
+        Ninja sasuke = new Ninja("Konoha", "ninja renegado", "Sasuke", 17, "Uchiha", "genin", "serpientes", "rayo");
+
+        //Human information
+        System.out.println("👤 HUMANOS:");
+        System.out.println(teuchi);
+        teuchi.setAge(48);
+        System.out.println("Edad actualizada: " + teuchi.getAge() + "\n");
+
+        //Animal information
+        System.out.println("🦊 ANIMALES:");
+        System.out.println(gamabunta);
+        System.out.println(kyubi + "\n");
+
+        //presentations
+        System.out.println("🌀 Conoce a nuestros aldeanos 🌀");
+        System.out.println(teuchi.presentation());
+        List<Introduce> characters = Arrays.asList(naruto, sasuke, gamabunta, kyubi);
+        introduceCharacter(characters);
+        System.out.println();
+
+        //Summons
+        System.out.println("🐸 Invocación: ");
+        naruto.summon(gamabunta);
+        System.out.println();
+
+        //start a battle
+        System.out.println("⚔️ BATALLA CON INVOCACIÓN:");
+        Battle.start(naruto, gamabunta);
+        System.out.println();
+
+        System.out.println("🔥 DUELO NINJA:");
+        Battle.fight(naruto, sasuke);
+
+    }
+
+    public static void introduceCharacter(List<Introduce> list) {
+        for(Introduce p : list){
+            System.out.println("- " + p.presentation());
         }
     }
 }
