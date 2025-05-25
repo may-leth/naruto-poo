@@ -41,6 +41,14 @@ public class Ninja extends Human implements Introduce, ChakraUser {
         this.summoning = summoning;
     }
 
+    public String getChakraType() {
+        return chakraType;
+    }
+
+    public void setChakraType(String chakraType) {
+        this.chakraType = chakraType;
+    }
+
     @Override
     public String toString() {
         return "Ninja{" +
