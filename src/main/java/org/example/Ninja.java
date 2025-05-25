@@ -7,12 +7,14 @@ public class Ninja extends Human implements Introduce, ChakraUser {
     protected String clan;
     protected String ninjaLevel;
     protected String summoning;
+    protected String chakraType;
 
-    public Ninja(String aldea, String occupation, String name, int age, String clan, String ninjaLevel, String summoning) {
+    public Ninja(String aldea, String occupation, String name, int age, String clan, String ninjaLevel, String summoning, String chakraType) {
         super(aldea, occupation, name, age);
         this.clan = clan;
         this.ninjaLevel = ninjaLevel;
         this.summoning = summoning;
+        this.chakraType = chakraType;
     }
 
     public String getClan() {
@@ -46,6 +48,7 @@ public class Ninja extends Human implements Introduce, ChakraUser {
                 ", clan='" + clan + '\'' +
                 ", ninjaLevel='" + ninjaLevel + '\'' +
                 ", summoning='" + summoning + '\'' +
+                ", chakraType='" + chakraType + '\'' +
                 ", aldea='" + aldea + '\'' +
                 ", occupation='" + occupation + '\'' +
                 ", age=" + age +
@@ -61,6 +64,11 @@ public class Ninja extends Human implements Introduce, ChakraUser {
 
     @Override
     public String chakraNature() {
-        return "Mi tipo de chakra en afín al estilo elemental: " + super.;
+        return "Mi tipo de chakra en afín al estilo elemental: " + this.chakraType;
+    }
+
+    public void summon(Animal animal){
+        System.out.println(this.name + " ha invocado a " + animal.getAnimal() + ".");
+        System.out.println(animal.presentation());
     }
 }

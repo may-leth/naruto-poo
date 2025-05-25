@@ -3,7 +3,7 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
         Human teuchi = new Human("konoha","chef","Teuchi",47);
-        Ninja naruto = new Ninja("Konoha", "ninja", "naruto", 17, "uzumaki","chunin", "sapos");
+        Ninja naruto = new Ninja("Konoha", "ninja", "Naruto", 17, "uzumaki","chunin", "sapos", "aire");
         Animal gamabunta = new Animal("sapo", "adulto-nodefinido",false, "agua");
 
         System.out.println(teuchi.toString());
@@ -21,5 +21,8 @@ public class Main {
         System.out.println(naruto.presentation());
         System.out.println(gamabunta.presentation());
         System.out.println(teuchi.presentation());
+
+        //Summons
+        naruto.summon(gamabunta);
     }
 }
